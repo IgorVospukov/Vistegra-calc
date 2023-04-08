@@ -1,0 +1,155 @@
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(235, 237, 252);
+}
+  
+.formWrap {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, minmax(25px, 1fr));
+  border-radius: 30px;
+  width: 80%;
+  height: 80%;
+  justify-self: center;
+  align-self: center;
+  overflow: auto;
+  background-color: white;
+  padding: 10px;
+}
+  
+.resultTable {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 80%;
+  justify-self: center;
+  align-self: center;
+  background-color: white;
+  border-radius: 30px;
+}
+  
+.formWrap__sheet,
+.materialContainer,
+.formWrap__pipe,
+.formWrapwidth,
+.formWrap__length,
+.formWrap__strength {
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+  background-color: rgb(235, 237, 252);
+  height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: grey;
+  border-radius: 10px;
+}
+  
+.formWrap__sheet__select,
+.formWrap__pipe__select,
+.formWrapwidth__width,
+.formWrapwidth__length,
+.formWrap__strength__select {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+.formWrap__pipe__select,
+  .formWrap__strength__select,
+  .formWrapwidth__length,
+  .formWrapwidth__width,
+  .formWrap__sheet__select {
+  margin-left: 10px;
+}
+  
+.formWrap__buttonSubmit {
+  grid-column: 1/2;
+  grid-row: 7/8;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  justify-self: center;
+  align-self: center;
+  background-color: rgb(235, 237, 252);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: rgb(251, 47, 87);
+  cursor: pointer;
+}
+.formWrap__buttonSubmit:hover {
+  scale:calc(105%);
+}
+
+@media (min-width: 320px) and (max-width: 1000px) {
+  * {
+    font-weight: 200;
+    overflow-y: scroll;
+    font-size: 12px;
+  }  
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    height: 100vh; 
+    width: auto;
+    background-color: rgb(235, 237, 252);
+    overflow-y: scroll;
+  }
+  .formWrap {
+    grid-column: 1/2;
+    width: 80%;
+    height: 100%;
+    font-weight: 100;
+    overflow-y: scroll;
+    
+  }
+  .resultTable {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 100%;
+    width: 80%;
+    overflow-y: scroll;
+  }
+  .formWrap__sheet {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .formWrap__buttonSubmit {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    border: none;
+    border-radius: 10px;
+    justify-self: center;
+    align-self: center;
+    background-color: rgb(235, 237, 252);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: rgb(251, 47, 87);
+    cursor: pointer;
+  }
+  .formWrap__sheet,
+  .labelContainer,
+  .formWrap__pipe,
+  .formWrapwidth,
+  .formWrap__length,
+  .formWrap__strength {
+    font-weight: 100;
+  }
+}
+
